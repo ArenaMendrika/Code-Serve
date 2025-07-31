@@ -44,11 +44,12 @@ nav {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .home {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .hero-text {
@@ -58,36 +59,125 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  position: relative;
+  text-align: center;
 }
 
 .hero-text h1 {
-    font-size: 4rem;
-    font-family: 'Inter', sans-serif;
+  font-size: 4rem;
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
 }
 
 .hero-text p {
-    width: 40%;
-    text-align: center;
+  width: 40%;
+  font-family: 'Poppins', sans-serif;
 }
 
 .home-button {
-    display: flex;
-    gap: 3rem;
-    margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
-.home-button button{
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 4px;
-    min-height: 50px;
-    min-width: 170px;
-    cursor: pointer;
-    background-color: #1e3a5f;
-    color: white;
-    border: none;
+.home-button button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  min-height: 50px;
+  min-width: 170px;
+  cursor: pointer;
+  background-color: #1e3a5f;
+  color: white;
+  border: none;
 }
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #1e3a5f;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.large-bubble {
+  position: absolute;
+  width: 120px;
+  height: 250px;
+  border-top-left-radius: 160px;
+  border-bottom-left-radius: 160px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  top: 100px;
+  right: 0;
+  opacity: 0.2;
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+.small-bubble {
+  width: 40px;
+  height: 40px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.top-left {
+  top: 80px;
+  left: 80px;
+}
+
+.middle-left {
+  top: 200px;
+  left: 50px;
+}
+
+.bottom-left {
+  bottom: 100px;
+  left: 100px;
+}
+
+.floating-card {
+  position: absolute;
+  top: 50%;
+  left: -110px;
+  transform: translateY(-50%);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  width: 150px;
+  z-index: 1;
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.floating-card h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #1e3a5f;
+}
+
+.floating-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-60%) translateX(5px); }
+  100% { transform: translateY(-50%) translateX(0); }
+}
+
+
+
 
 /* about */
 .about-section {
