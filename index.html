@@ -171,29 +171,49 @@
   </div>
 </section>
 
-    <section class="contact-section">
-      <h2>Contact Us</h2>
-      <form action="https://formsubmit.co/tonemail@example.com" method="POST" class="contact-form" >
-        <!-- Pour désactiver captcha de FormSubmit -->
-        <input type="hidden" name="_captcha" value="false" />
-        <!-- Pour rediriger après envoi -->
-        <input type="hidden" name="_next" value="https://tonsite.com/merci.html" />
+ <section class="contact-section">
+  <!-- Bulles à gauche -->
+  <div class="bubbleco bubble-left bubble1"></div>
+  <div class="bubbleco bubble-left bubble2"></div>
+  <div class="bubbleco bubble-left bubble3"></div>
 
-        <label for="name">Nom</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" required />
+  <!-- Bulles à droite -->
+  <div class="bubble bubble-right bubble1"></div>
+  <div class="bubble bubble-right bubble2"></div>
+  <div class="bubble bubble-right bubble3"></div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Votre email" required />
+  <h1>Contact Us</h1>
 
-        <label for="subject">Sujet</label>
-        <input type="text" id="subject" name="subject" placeholder="Sujet" />
+  <form action="https://formsubmit.co/c2cde532b03d53eb0265a622208debcb" method="POST" class="contact-form">
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="En dire plus..." required></textarea>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Name" required />
 
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email" required />
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Subject" />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="3" placeholder="..." required></textarea>
+
+    <button type="submit">SEND</button>
+  </form>
+</section>
   </main>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <p>© 2025 by Arena Mendrika. Tous droits réservés.</p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
