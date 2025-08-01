@@ -98,7 +98,7 @@ nav {
   border-radius: 50%;
   background-color: #1e3a5f;
   z-index: 0;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .large-bubble {
@@ -109,9 +109,8 @@ nav {
   border-bottom-left-radius: 160px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  top: 100px;
+  bottom: 70px;
   right: 0;
-  opacity: 0.2;
   animation: float 6s ease-in-out infinite;
   z-index: 0;
 }
@@ -133,22 +132,39 @@ nav {
 }
 
 .bottom-left {
-  bottom: 100px;
-  left: 100px;
+  bottom: 200px;
+  left: 300px;
 }
 
-.floating-card {
+.card-stack {
   position: absolute;
   top: 50%;
   left: -110px;
   transform: translateY(-50%);
+}
+
+.floating-card {
+  position: absolute;
   background: white;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  width: 150px;
+  width: 160px;
   z-index: 1;
-  animation: floatCard 4s ease-in-out infinite;
+}
+
+.firstcard {
+  top: -100px;
+  left: 0;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+.secondcard {
+  top: 95%;
+  left: -30px;
+  transform: rotate(8deg);
+  z-index: 1;
 }
 
 .floating-card h3 {
@@ -163,7 +179,6 @@ nav {
   color: #333;
 }
 
-/* Animations */
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
@@ -175,8 +190,6 @@ nav {
   50% { transform: translateY(-60%) translateX(5px); }
   100% { transform: translateY(-50%) translateX(0); }
 }
-
-
 
 
 /* about */
