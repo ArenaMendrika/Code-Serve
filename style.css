@@ -151,9 +151,37 @@ nav.scrolled .logo {
 }
 
 .nav-links a {
-  color: white;
+ position: relative;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #a0c4ff;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus,
+nav.scrolled .nav-links a:hover {
+  color: #a0c4ff;
+  transform: translateY(-4px);
+  text-shadow: 0 0 8px rgba(160, 196, 255, 0.7);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after,
+nav.scrolled .nav-links a:hover::after {
+  width: 100%;
 }
 
 nav.scrolled .hamburger,
