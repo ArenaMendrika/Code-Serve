@@ -9,11 +9,20 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+const toggleBtn = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    navToggle.classList.toggle('open');
+toggleBtn.addEventListener('click', () => {
+  toggleBtn.classList.toggle('open');
+  navLinks.classList.toggle('open');
+  document.body.classList.toggle('menu-open');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    toggleBtn.classList.remove('open');
+    navLinks.classList.remove('open');
+    document.body.classList.remove('menu-open');
   });
+});
 });

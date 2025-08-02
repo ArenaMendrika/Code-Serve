@@ -11,17 +11,20 @@
 <script src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">Code&Serve</div>
-      <ul class="nav-links">
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Workflow</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <div class="logo">Code&Serve</div>
+    <button class="nav-toggle" aria-label="toggle menu">
+      <span class="hamburger"></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About us</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main>
 <section class="home">
@@ -52,7 +55,7 @@
   </div>
 </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about">
     <div class="about-images-two">
     <div class="top-two">
     <div class="big-one">
@@ -78,12 +81,12 @@
   Whether you’re just starting out or scaling up, we’re here to partner with you at every stage of your journey.
   <br><span class="highlighted-ending">Let’s build something amazing together...</span>
 </p>
-        <a href="#" class="learn-more">CONTACT US</a>
+        <a href="#contact" class="learn-more">CONTACT US</a>
       </div>
     </section>
 
     
-<section class="workflow">
+<section class="workflow" id="workflow">
   <h1>Workflow</h1>
   <div class="card-container">
     <div class="card">
@@ -109,7 +112,7 @@
   </div>
 </section>
 
-<section class="team-section">
+<section class="team-section" id="team">
   <h1>Our Team</h1>
    <div class="team-grid">
     <div class="team-member">
@@ -171,7 +174,7 @@
   </div>
 </section>
 
- <section class="contact-section">
+ <section class="contact-section" id="contact">
   <!-- Bulles à gauche -->
   <div class="bubbleco bubble-left bubble1"></div>
   <div class="bubbleco bubble-left bubble2"></div>
